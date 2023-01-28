@@ -1,0 +1,17 @@
+{
+  "name": "blogr-landing-page-fem",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP).",
+  "main": "index.js",
+  "scripts": {
+    "live": "live-server",
+    "sass": "sass src/css/main.scss src/css/style.css -w",
+    "start": "npm-run-all --parallel live sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.57.1"
+  }
+}
