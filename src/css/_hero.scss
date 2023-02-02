@@ -18,6 +18,10 @@
       padding-top: 120px;
     }
 
+    @media only screen and (min-width: 900px) {
+      padding-top: 226px;
+    }
+
     div {
       margin-top: 48px;
 
@@ -25,6 +29,10 @@
         display: flex;
         flex-direction: column;
         padding: 0 16px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        margin-top: 43px;
       }
     }
   }
@@ -37,5 +45,10 @@
     top: -220px;
     left: 80%;
     transform: translateX(-50%);
+
+    @media only screen and (min-width: 900px) {
+      top: -1350px;
+      width: revert;
+    }
   }
 }
