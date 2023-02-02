@@ -82,6 +82,38 @@
   }
 }
 
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 82px;
+}
+.nav {
+  position: absolute;
+  right: 24px;
+  top: 70px;
+  width: 324px;
+  background-color: #fff;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+  border-radius: 5px;
+  display: none;
+}
+@media only screen and (max-width: 370px) {
+  .nav {
+    width: 270px;
+  }
+}
+.nav ul {
+  list-style: none;
+}
 .hero {
   text-align: center;
   position: relative;
