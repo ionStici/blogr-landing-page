@@ -1,8 +1,41 @@
 .hero {
-  font-family: var(--overpass);
   text-align: center;
+
+  position: relative;
+  overflow: hidden;
 
   height: 600px;
   background-image: linear-gradient(135deg, #ff8f71 0%, #ff3e55 100%);
+
   border-bottom-left-radius: 100px;
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 196px 24px 24px 24px;
+
+    @media only screen and (max-width: 370px) {
+      padding-top: 120px;
+    }
+
+    div {
+      margin-top: 48px;
+
+      @media only screen and (max-width: 350px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+      }
+    }
+  }
+
+  &__img {
+    width: 1200px;
+
+    position: absolute;
+    z-index: 1;
+    top: -220px;
+    left: 80%;
+    transform: translateX(-50%);
+  }
 }

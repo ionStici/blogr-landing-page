@@ -18,13 +18,29 @@
   --ubuntu: "Ubuntu", sans-serif;
 }
 
-body {
-}
+// body {}
 
 .h1 {
+  font-family: var(--overpass);
+  color: #fff;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 55px;
+  letter-spacing: -1.08px;
+
+  padding: 0 10px;
+
+  @media only screen and (max-width: 350px) {
+    font-size: 30px;
+  }
 }
 
 .p {
+  font-family: var(--overpass);
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 // BUTTON
@@ -33,13 +49,35 @@ body {
 .btn:link,
 .btn:visited {
   font-family: var(--ubuntu);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #fff;
 }
 
 .btn {
   &--white {
+    padding: 14px 14px 14px 15px;
+    color: #ff505c;
+    background-color: #fff;
   }
 
   &--transparent {
+    padding: 14px 24px 14px 25px;
+    color: #fff;
+  }
+}
+
+// UTILITIES
+
+.u-margin-right-16px {
+  margin-right: 16px;
+
+  @media only screen and (max-width: 350px) {
+    margin-bottom: 16px;
+    margin-right: 0;
   }
 }
 
