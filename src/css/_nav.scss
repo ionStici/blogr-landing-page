@@ -26,26 +26,99 @@
   top: 70px;
 
   width: 324px;
+  height: 511px;
+  padding: 24px 24px 32px 24px;
+  overflow-y: scroll;
+
   background-color: #fff;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
   border-radius: 5px;
-
-  display: none;
 
   @media only screen and (max-width: 370px) {
     width: 270px;
   }
 
-  ul {
+  &__ul {
     list-style: none;
   }
 
-  li {
+  &__item {
   }
 
-  li span {
+  &__item {
+    &__link,
+    &__link:link,
+    &__link:visited {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+
+      font-family: var(--overpass);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      color: #1f3e5a;
+      text-decoration: none;
+
+      &::after {
+        content: url(./../images/icon-arrow-dark.svg);
+        margin-left: 8px;
+        margin-bottom: 4px;
+      }
+    }
   }
 
-  div {
+  // // // // //
+
+  &__sub-nav {
+    list-style: none;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    background-color: rgba(45, 46, 64, 0.08);
+    padding: 17px 0 25px 0;
+    text-align: center;
+
+    min-height: 0;
+    transition: min-height 0.2s;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &__link,
+      &__link:link,
+      &__link:visited {
+        text-decoration: none;
+        font-family: var(--overpass);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba(31, 62, 90, 0.75);
+      }
+    }
+  }
+
+  // // // // //
+
+  &__btns-box {
+    border-top: 1px solid #e8e4e4;
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  &__link,
+  &__link:link,
+  &__link:visited {
+    display: block;
+    text-decoration: none;
+  }
+
+  &__link--login {
+    margin-bottom: 24px;
+  }
+
+  &__link--sign-up {
   }
 }

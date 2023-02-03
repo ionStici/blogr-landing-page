@@ -101,18 +101,70 @@
   right: 24px;
   top: 70px;
   width: 324px;
+  height: 511px;
+  padding: 24px 24px 32px 24px;
+  overflow-y: scroll;
   background-color: #fff;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
   border-radius: 5px;
-  display: none;
 }
 @media only screen and (max-width: 370px) {
   .nav {
     width: 270px;
   }
 }
-.nav ul {
+.nav__ul {
   list-style: none;
+}
+.nav__item__link, .nav__item__link:link, .nav__item__link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-family: var(--overpass);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1f3e5a;
+  text-decoration: none;
+}
+.nav__item__link::after, .nav__item__link:link::after, .nav__item__link:visited::after {
+  content: url(./../images/icon-arrow-dark.svg);
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+.nav__sub-nav {
+  list-style: none;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  background-color: rgba(45, 46, 64, 0.08);
+  padding: 17px 0 25px 0;
+  text-align: center;
+  min-height: 0;
+  transition: min-height 0.2s;
+}
+.nav__sub-nav__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.nav__sub-nav__item__link, .nav__sub-nav__item__link:link, .nav__sub-nav__item__link:visited {
+  text-decoration: none;
+  font-family: var(--overpass);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(31, 62, 90, 0.75);
+}
+.nav__btns-box {
+  border-top: 1px solid #e8e4e4;
+  text-align: center;
+  padding-top: 24px;
+}
+.nav__link, .nav__link:link, .nav__link:visited {
+  display: block;
+  text-decoration: none;
+}
+.nav__link--login {
+  margin-bottom: 24px;
 }
 .hero {
   text-align: center;
