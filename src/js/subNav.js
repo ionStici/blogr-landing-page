@@ -10,6 +10,8 @@ const runSubNav = function () {
         const navItem = e.target.closest(".nav__item");
         subNav.style.display = "revert";
 
+        navItem.classList.add("rotate-arrow");
+
         setTimeout(
           () => (subNav.style.height = `${subNav.dataset.height}px`),
           1
@@ -20,12 +22,13 @@ const runSubNav = function () {
         subNav.dataset.navStatus = "open";
       } else {
         const navItem = e.target.closest(".nav__item");
+        navItem.classList.remove("rotate-arrow");
 
         navItem.classList.remove("nav-open");
 
         setTimeout(() => (subNav.style.height = `0`), 1);
         setTimeout(() => navItem.classList.remove("nav-open-pm"), 100);
-        setTimeout(() => (subNav.style.display = "none"), 200);
+        setTimeout(() => (subNav.style.display = "none"), 150);
 
         subNav.dataset.navStatus = "closed";
       }

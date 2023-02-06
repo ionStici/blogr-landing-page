@@ -4,7 +4,6 @@
   top: 56px;
   left: 0;
 
-  //   max-width: 1110px;
   width: 100%;
   padding: 0 24px;
 
@@ -12,11 +11,22 @@
   align-items: center;
   justify-content: space-between;
 
+  @media only screen and (min-width: 768px) {
+    max-width: 1110px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__logo {
     width: 82px;
+
+    @media only screen and (min-width: 768px) {
+      width: 101px;
+    }
   }
 
   &__open-menu {
+    display: none;
     cursor: pointer;
     padding: 7px;
   }
@@ -29,50 +39,80 @@
     position: relative;
     z-index: 10;
   }
+
+  &__open-menu,
+  &__close-menu {
+    @media only screen and (min-width: 768px) {
+      display: none;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
 }
 
-.nav {
-  position: absolute;
-  z-index: 10;
-  right: 24px;
-  top: 70px;
+// // // // // // // // // // // // // // // // // // // // //
 
+.nav {
   font-family: var(--overpass);
 
-  width: 324px;
-  max-height: 511px;
-  overflow-y: scroll;
-  padding: 24px 24px 32px 24px;
+  @media only screen and (max-width: 767px) {
+    position: absolute;
+    z-index: 10;
+    right: 24px;
+    top: 70px;
 
-  background-color: #fff;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
-  border-radius: 5px;
+    width: 324px;
+    max-height: 511px;
+    overflow-y: scroll;
+    padding: 24px 24px 32px 24px;
 
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  display: none;
+    background-color: #fff;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+    border-radius: 5px;
 
-  transition: opacity 0.2s, visibility 0.2s;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+
+    transition: opacity 0.2s, visibility 0.2s;
+  }
 
   @media only screen and (max-width: 370px) {
     width: 270px;
   }
 
-  &__bg {
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    display: none;
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    margin-left: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
+
+  &__bg {
+    @media only screen and (max-width: 767px) {
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      display: none;
+    }
+  }
+
+  // NAV
 
   &__ul {
     list-style: none;
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -82,21 +122,50 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 24px;
 
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 28px;
-      color: #1f3e5a;
+      @media only screen and (max-width: 767px) {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #1f3e5a;
+
+        margin-bottom: 24px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        font-family: var(--ubuntu);
+        margin-right: 32px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: #fff;
+        opacity: 0.75;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: opacity 0.15s, border 0.15s;
+
+        &:hover {
+          opacity: 1;
+          border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+        }
+      }
+
       text-decoration: none;
 
       &::after {
         content: url(./../images/icon-arrow-dark.svg);
         margin-left: 8px;
         margin-bottom: 4px;
+        transition: transform 0.2s;
+
+        @media only screen and (min-width: 768px) {
+          content: url(./../images/icon-arrow-light.svg);
+        }
       }
     }
   }
+
+  // SUB NAV
 
   &__sub-nav {
     list-style: none;
@@ -113,6 +182,23 @@
 
     transition: height 0.2s, visibility 0.2s, opacity 0.2s;
 
+    @media only screen and (min-width: 768px) {
+      transition: height 0.2s, visibility 0.2s, opacity 0.2s, padding 0.2s,
+        margin 0.2s;
+
+      &--1 {
+        width: 135px;
+      }
+
+      &--2 {
+        width: 105px;
+      }
+
+      &--3 {
+        width: 125px;
+      }
+    }
+
     &__item {
       &:not(:last-child) {
         margin-bottom: 12px;
@@ -126,14 +212,33 @@
         font-size: 16px;
         line-height: 28px;
         color: rgba(31, 62, 90, 0.75);
+
+        @media only screen and (min-width: 768px) {
+          font-weight: 400;
+          font-size: 15px;
+          color: #2d2e40;
+          transition: font-weight 0.1s;
+
+          &:hover {
+            font-weight: 700;
+          }
+        }
       }
     }
   }
 
   &__btns-box {
-    border-top: 1px solid #e8e4e4;
     text-align: center;
-    padding-top: 24px;
+
+    @media only screen and (max-width: 767px) {
+      border-top: 1px solid #e8e4e4;
+      padding-top: 24px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__link,
@@ -174,16 +279,44 @@
 // MAIN NAV
 
 .open-main-nav .nav {
-  pointer-events: all;
-  visibility: visible;
-  opacity: 1;
+  @media only screen and (max-width: 767px) {
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.display-block {
+  @media only screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.display-none {
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.rotate-arrow .nav__item__link::after {
+  transform: rotate(180deg);
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: -4px;
+  }
 }
 
 // SUB NAV
 
 .nav-open-pm .nav__sub-nav {
-  padding: 17px 0 25px 0;
-  margin-bottom: 24px;
+  @media only screen and (max-width: 767px) {
+    padding: 17px 0 25px 0;
+    margin-bottom: 24px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 24px;
+  }
 }
 
 .nav-open .nav__sub-nav {
@@ -192,4 +325,18 @@
   opacity: 1;
 }
 
-//
+.nav__sub-nav {
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    top: 65px;
+    background-color: #fff;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+    text-align: left;
+
+    &--1 {
+      left: 150px;
+    }
+  }
+}
+
+// END
