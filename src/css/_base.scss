@@ -18,7 +18,9 @@
   --ubuntu: "Ubuntu", sans-serif;
 }
 
-// body {}
+body {
+  overflow-x: hidden;
+}
 
 .h1 {
   font-family: var(--overpass);
