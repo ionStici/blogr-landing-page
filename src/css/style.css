@@ -60,6 +60,7 @@
   text-decoration: none;
   border-radius: 50px;
   border: 1px solid #fff;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 .btn--white {
@@ -67,9 +68,18 @@
   color: #ff505c;
   background-color: #fff;
 }
+.btn--white:hover {
+  background-color: #ff7b86;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
 .btn--transparent {
   padding: 14px 24px 14px 25px;
   color: #fff;
+}
+.btn--transparent:hover {
+  color: #ff7b86;
+  background-color: #fff;
 }
 
 .u-margin-right-16px {
@@ -302,6 +312,21 @@
   line-height: 28px;
   color: #1f3e5a;
 }
+@media only screen and (min-width: 768px) {
+  .nav__link--login, .nav__link--login:link, .nav__link--login:visited {
+    margin-bottom: 0;
+    margin-right: 32px;
+    color: #fff;
+    opacity: 0.75;
+    transition: opacity 0.75;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .nav__link--login:hover, .nav__link--login:link:hover, .nav__link--login:visited:hover {
+    opacity: 1;
+  }
+}
 .nav__link--sign-up, .nav__link--sign-up:link, .nav__link--sign-up:visited {
   font-family: var(--ubuntu);
   font-weight: 700;
@@ -313,6 +338,17 @@
   width: 137px;
   margin: 0 auto;
   padding: 15px 0 15px 0;
+  transition: background 0.2s, color 0.2s;
+}
+@media only screen and (min-width: 768px) {
+  .nav__link--sign-up, .nav__link--sign-up:link, .nav__link--sign-up:visited {
+    color: #ff505c;
+    background: #fff;
+  }
+  .nav__link--sign-up:hover, .nav__link--sign-up:link:hover, .nav__link--sign-up:visited:hover {
+    color: #fff;
+    background: #ff7b86;
+  }
 }
 
 @media only screen and (max-width: 767px) {

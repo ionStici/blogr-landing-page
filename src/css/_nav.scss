@@ -257,6 +257,21 @@
     font-size: 18px;
     line-height: 28px;
     color: #1f3e5a;
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 0;
+      margin-right: 32px;
+      color: #fff;
+      opacity: 0.75;
+      transition: opacity 0.75;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   &__link--sign-up,
@@ -273,6 +288,17 @@
     width: 137px;
     margin: 0 auto;
     padding: 15px 0 15px 0;
+    transition: background 0.2s, color 0.2s;
+
+    @media only screen and (min-width: 768px) {
+      color: #ff505c;
+      background: #fff;
+
+      &:hover {
+        color: #fff;
+        background: #ff7b86;
+      }
+    }
   }
 }
 

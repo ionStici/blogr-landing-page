@@ -66,6 +66,7 @@
   text-decoration: none;
   border-radius: 50px;
   border: 1px solid #fff;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 .btn {
@@ -73,11 +74,22 @@
     padding: 14px 14px 14px 15px;
     color: #ff505c;
     background-color: #fff;
+
+    &:hover {
+      background-color: #ff7b86;
+      color: #ffffff;
+      border: 1px solid transparent;
+    }
   }
 
   &--transparent {
     padding: 14px 24px 14px 25px;
     color: #fff;
+
+    &:hover {
+      color: #ff7b86;
+      background-color: #fff;
+    }
   }
 }
 
