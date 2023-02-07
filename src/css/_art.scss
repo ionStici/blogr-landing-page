@@ -4,6 +4,10 @@
   font-family: var(--overpass);
   text-align: center;
 
+  @media only screen and (min-width: 1000px) {
+    text-align: left;
+  }
+
   &__img-wrapper {
     width: 375px;
     position: absolute;
@@ -11,11 +15,46 @@
     top: -180px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media only screen and (min-width: 1000px) {
+      width: revert;
+      max-width: 1605px;
+      margin: 0 auto;
+      position: relative;
+      top: revert;
+      left: revert;
+      transform: revert;
+    }
   }
 
   &__phones-img {
     width: 100%;
     transform: scale(1.05);
+
+    @media only screen and (min-width: 1000px) {
+      width: revert;
+      transform: revert;
+      position: absolute;
+      top: -70px;
+      left: 50px;
+    }
+
+    @media only screen and (min-width: 1100px) {
+      left: 75px;
+    }
+
+    @media only screen and (min-width: 1300px) {
+      left: 125px;
+    }
+  }
+
+  &__content-layout {
+    @media only screen and (min-width: 1000px) {
+      width: 100%;
+      background-image: linear-gradient(135deg, #2d2e40 0%, #3f4164 100%);
+      border-radius: 0px 100px;
+      overflow: hidden;
+    }
   }
 
   &__content-wrapper {
@@ -30,9 +69,56 @@
       height: 550px;
     }
 
+    @media only screen and (min-width: 1000px) {
+      height: 400px;
+      padding: 50px 48px;
+
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+
+      border-radius: revert;
+      background-image: revert;
+
+      overflow: revert;
+    }
+
+    @media only screen and (min-width: 1100px) {
+      padding-right: 75px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      padding: 75px;
+    }
+
+    @media only screen and (min-width: 1300px) {
+      padding: 111px 100px 111px 0;
+    }
+
+    @media only screen and (min-width: 1350px) {
+      padding-right: 165px;
+    }
+
     div {
       max-width: 430px;
       margin: 0 auto;
+
+      @media only screen and (min-width: 1000px) {
+        max-width: 350px;
+        margin: 0 0 0 auto;
+      }
+
+      @media only screen and (min-width: 1100px) {
+        max-width: 400px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        max-width: 500px;
+      }
+
+      @media only screen and (min-width: 1300px) {
+        max-width: 540px;
+      }
     }
   }
 
@@ -44,6 +130,13 @@
 
     width: 600px;
     top: -220px;
+
+    @media only screen and (min-width: 1000px) {
+      transform: revert;
+      width: revert;
+      top: -500px;
+      left: -215px;
+    }
   }
 
   &__h2 {
@@ -55,6 +148,10 @@
     margin-bottom: 10px;
     position: relative;
     z-index: 2;
+
+    @media only screen and (min-width: 1000px) {
+      margin-bottom: 5px;
+    }
   }
 
   &__p {
