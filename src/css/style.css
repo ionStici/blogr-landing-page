@@ -473,7 +473,7 @@ body {
   font-family: var(--overpass);
   font-weight: 600;
   max-width: 420px;
-  margin: 100px auto;
+  margin: 100px auto 273px auto;
 }
 @media only screen and (min-width: 768px) {
   .design {
@@ -563,6 +563,67 @@ body {
   .design__p:not(:last-child) {
     margin-bottom: 64px;
   }
+}
+
+.art {
+  position: relative;
+  color: #fff;
+  font-family: var(--overpass);
+  text-align: center;
+}
+.art__img-wrapper {
+  width: 375px;
+  position: absolute;
+  z-index: 2;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.art__phones-img {
+  width: 100%;
+  transform: scale(1.05);
+}
+.art__content-wrapper {
+  position: relative;
+  background-image: linear-gradient(135deg, #2d2e40 0%, #3f4164 100%);
+  border-radius: 0px 100px;
+  overflow: hidden;
+  height: 625px;
+  padding: 221px 24px 0 24px;
+}
+@media only screen and (min-width: 480px) {
+  .art__content-wrapper {
+    height: 550px;
+  }
+}
+.art__content-wrapper div {
+  max-width: 430px;
+  margin: 0 auto;
+}
+.art__pattern-img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  top: -220px;
+}
+.art__h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 61px;
+  letter-spacing: -1.2px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+.art__p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
