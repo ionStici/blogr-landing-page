@@ -845,14 +845,41 @@ body {
   line-height: 33px;
   color: #fff;
 }
+@media only screen and (min-width: 768px) {
+  .footer {
+    text-align: left;
+    padding: 70px 24px;
+    font-size: 15px;
+  }
+}
+.footer__container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .footer__logo {
   margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .footer__logo {
+    display: block;
+  }
 }
 .footer ul {
   list-style: none;
 }
 .footer ul:not(:last-child) {
   margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .footer ul:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 .footer__title {
   font-weight: 500;

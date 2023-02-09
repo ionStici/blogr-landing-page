@@ -8,8 +8,28 @@
   line-height: 33px;
   color: #fff;
 
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+    padding: 70px 24px;
+    font-size: 15px;
+  }
+
+  &__container {
+    max-width: 1110px;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
   &__logo {
     margin-bottom: 72px;
+
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
   }
 
   ul {
@@ -17,6 +37,10 @@
 
     &:not(:last-child) {
       margin-bottom: 40px;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
     }
   }
 
