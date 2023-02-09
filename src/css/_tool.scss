@@ -4,14 +4,36 @@
   margin-top: 79px;
 
   @media only screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
+    margin-top: 116px;
+    margin-bottom: 123px;
+  }
+
+  &__container {
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      max-width: 1440px;
+      margin: 0 auto;
+    }
   }
 
   &__img-wrapper {
     text-align: center;
     max-width: 400px;
     margin: 0 auto;
+
+    @media only screen and (min-width: 768px) {
+      text-align: left;
+      max-width: revert;
+      margin: revert;
+      margin-left: -278px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      margin-left: -288px;
+    }
   }
 
   &__img {
@@ -19,6 +41,11 @@
     transform: scale(1.35);
     margin-top: 33px;
     margin-bottom: 76px;
+
+    @media only screen and (min-width: 768px) {
+      transform: revert;
+      margin: 0;
+    }
   }
 
   &__content-wrapper {
@@ -28,6 +55,19 @@
 
     max-width: 550px;
     margin: 0 auto;
+
+    @media only screen and (min-width: 768px) {
+      max-width: 540px;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      padding-right: 50px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      padding-right: 0;
+      margin-left: 40px;
+    }
   }
 
   &__h2 {
@@ -36,6 +76,10 @@
     line-height: 32px;
     color: #1f3e5a;
     margin-bottom: 16px;
+
+    @media only screen and (min-width: 768px) {
+      line-height: 28px;
+    }
   }
 
   &__p {
@@ -47,6 +91,10 @@
 
     &:not(:last-child) {
       margin-bottom: 40px;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 64px;
+      }
     }
   }
 }
