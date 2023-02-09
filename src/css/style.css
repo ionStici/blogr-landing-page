@@ -835,4 +835,37 @@ body {
   }
 }
 
+.footer {
+  background-color: #24242c;
+  text-align: center;
+  border-radius: 0px 100px 0px 0px;
+  padding: 75px 24px;
+  font-family: var(--ubuntu);
+  font-size: 18px;
+  line-height: 33px;
+  color: #fff;
+}
+.footer__logo {
+  margin-bottom: 72px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul:not(:last-child) {
+  margin-bottom: 40px;
+}
+.footer__title {
+  font-weight: 500;
+  margin-bottom: 21px;
+}
+.footer__link, .footer__lin:link, .footer__link:visited {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0.75;
+}
+.footer__link:hover, .footer__lin:link:hover, .footer__link:visited:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */

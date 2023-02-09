@@ -1,0 +1,40 @@
+.footer {
+  background-color: #24242c;
+  text-align: center;
+  border-radius: 0px 100px 0px 0px;
+  padding: 75px 24px;
+  font-family: var(--ubuntu);
+  font-size: 18px;
+  line-height: 33px;
+  color: #fff;
+
+  &__logo {
+    margin-bottom: 72px;
+  }
+
+  ul {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 21px;
+  }
+
+  &__link,
+  &__lin:link,
+  &__link:visited {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    opacity: 0.75;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
