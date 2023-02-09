@@ -2,6 +2,16 @@
 
 This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP).
 
+| **Links** | [Solution URL](https://github.com/ionStici/typemaster-pre-launch-landing-page-fem) | [Live Site URL](https://ionstici.github.io/typemaster-pre-launch-landing-page-fem) |
+| --------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+
+| **Author** | [GitHub](https://github.com/ionStici) | [FE Mentor](https://www.frontendmentor.io/profile/ionStici) | [Twitter](https://twitter.com/ionStici_) |
+| ---------- | ------------------------------------- | ----------------------------------------------------------- | ---------------------------------------- |
+
+<br>
+
+![](./src/images/screenshot.jpeg)
+
 <!-- ### Primary
 
 - Light red (CTA text): hsl(356, 100%, 66%)
